@@ -1,25 +1,13 @@
-import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import FileUpload from './FileUpload';
 
 function App() {
-  const [count,setCount]=useState(0);
-    function Addition(){
-      setCount(prevCount=>prevCount+1);
-    }
-    function Subtraction(){
-      setCount(prevCount=>prevCount-1);
-    }
-  return (
-    <div className="counter">
-      <button className='counter--minus' onClick={Subtraction}>-</button>
-      <div className='counter--count'>
-        <h1>{count}</h1>
-      </div>
-      <button className='counter--plus' onClick={Addition}>+</button>
-    </div>
-  );
+    return (
+        <div className="App">
+            <FileUpload />
+        </div>
+    );
 }
 
 export default App;
-
- 
